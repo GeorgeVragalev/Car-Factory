@@ -125,9 +125,3 @@ fully customize your vehicle from the style down to the engine.
 Another instance of such a dealership is the TeslaBuilder class that has it's own
 ITeslaBuilder interface that has specific data for the Tesla. The TeslaCarBuilder
 itself lets you customize your own Tesla car and let's you build a Tesla Model S.
-
-
-
-
-
-
