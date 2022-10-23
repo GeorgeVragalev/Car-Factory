@@ -1,8 +1,11 @@
-﻿namespace CarFactory.Models;
+﻿using CarFactory.Models.Enums;
+
+namespace CarFactory.Models;
 
 public class Car : Vehicle
 {
     public int Doors { get; set; }
+    public CarBody Body { get; set; }
     public Car()
     {
         Wheels = 4;
@@ -19,6 +22,6 @@ public class Car : Vehicle
 
     public override void Drive()
     {
-        Console.WriteLine($"I am driving a {Color} {Style} {Model} model {(IsElectric? "Electric" : "Fuel")} {Doors} door car with {Comfort} comfort rating and a {HorsePower} horsepower engine");
+        Console.WriteLine($"I am driving a {Color} {Style} {Manufacturer} {Model} model {(IsElectric? "Electric" : "Fuel")} {Doors} door car with {Comfort} comfort rating and a {HorsePower} horsepower engine");
     }
 }

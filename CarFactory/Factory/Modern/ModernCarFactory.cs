@@ -26,7 +26,7 @@ public class ModernCarFactory : IModernFactory
     {
         vehicle.Style = Style.Sport;
         vehicle.Comfort = Comfort.Okay;
-        vehicle.Model = "Sport";
+        vehicle.Model = "RS";
         vehicle.HorsePower = new Random().Next(250, 300);
         return vehicle;
     }
@@ -55,5 +55,72 @@ public class ModernCarFactory : IModernFactory
         vehicle.IsElectric = true;
         vehicle.Model = "E-Model";
         return vehicle;
+    }
+
+    public Vehicle BuildCustom()
+    {
+        var car = _carFactory.Build();
+
+        var terminate = false;
+        while (!terminate)
+        {
+            try
+            {
+                Console.WriteLine("Welcome to building your own car\n");
+
+                Console.Write("Select the type of car you want to build:" +
+                              " \n (1) Create Modern" +
+                              " \n (2) Make Sport" +
+                              " \n (3) Make Offroad" +
+                              " \n (4) Make Classic" +
+                              " \n (5) Make Electric" +
+                              " \n (6) Quit \n"
+                );
+                
+                Console.WriteLine("");
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        CreateModern();
+                        break;
+                    case 2:
+                        MakeSport(car);
+                        break;
+                    case 3:
+                        MakeOffroad(car);
+                        break;
+                    case 4:
+                        MakeClassic(car);
+                        break;
+                    case 5:
+                        MakeElectric(car);
+                        break;
+                    case 6:
+                        terminate = true;
+                        break;
+                    default:
+                        break;
+                }
+                Console.WriteLine("\n");
+
+
+                Console.WriteLine("Do you wish to continue building? (y) or (n): ");
+
+                var continueOn = Console.ReadLine();
+                if (continueOn.ToLower().Equals("n"))
+                {
+                    break;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("invalid input \n");
+                continue;
+            }
+        }
+
+        return car;
     }
 }

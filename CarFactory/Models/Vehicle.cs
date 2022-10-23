@@ -8,7 +8,6 @@ public abstract class Vehicle : IVehicle
 {
     protected Vehicle()
     {
-        
     }
     protected Vehicle(Vehicle vehicle)
     {

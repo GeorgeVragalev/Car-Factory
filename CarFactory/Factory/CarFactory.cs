@@ -8,9 +8,11 @@ public class CarFactory : VehicleFactory
     public override Car Build()
     {
         var car = new Car();
+        car.Body = (CarBody) new Random().Next(1, 5);
+        car.Doors = 4;
         car.ProductionYear = 2022;
         car.IsElectric = false;
-        car.Manufacturer = "Germany";
+        car.Manufacturer = "Porsche";
         car.HorsePower = new Random().Next(80, 130);
         car.Model = "New";
         car.Comfort = (Comfort) new Random().Next(1, 5);

@@ -1,9 +1,10 @@
-﻿namespace CarFactory.Models;
+﻿using CarFactory.Models.Enums;
+
+namespace CarFactory.Models;
 
 public class Motorcycle : Vehicle
 {
-    public TYPE Type { get; set; }
-    
+    public MotorcycleType MotorcycleType { get; set; }
     public Motorcycle()
     {
         Wheels = 2;
@@ -20,6 +21,6 @@ public class Motorcycle : Vehicle
 
     public override void Drive()
     {
-        Console.WriteLine($"I am driving a {Color} {Style} {Model} model  {(IsElectric ? "Electric" : "Fuel")} motorcycle with {Comfort} comfort rating and a {HorsePower} horsepower engine");
+        Console.WriteLine($"I am driving a {Color} {Style} {Manufacturer} {Model} model {(IsElectric ? "Electric" : "Fuel")} motorcycle with {Comfort} comfort rating and a {HorsePower} horsepower engine");
     }
 }

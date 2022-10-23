@@ -7,4 +7,11 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Content Include="img.png" />
+      <Content Include="img_1.png" />
+      <Content Include="img_2.png" />
+      <Content Include="img_3.png" />
+    </ItemGroup>
+
 </Project>
