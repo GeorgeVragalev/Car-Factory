@@ -104,15 +104,6 @@ public class ModernCarFactory : IModernFactory
                         break;
                 }
                 Console.WriteLine("\n");
-
-
-                Console.WriteLine("Do you wish to continue building? (y) or (n): ");
-
-                var continueOn = Console.ReadLine();
-                if (continueOn.ToLower().Equals("n"))
-                {
-                    break;
-                }
             }
             catch (Exception e)
             {
