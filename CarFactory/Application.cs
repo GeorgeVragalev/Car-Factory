@@ -22,6 +22,11 @@ public static class Application
 
         Vehicles.GetVehicles();
 
+        var originalCar = carFactory.Build();
+        var cloneCar = originalCar.Clone();
+        
+        Vehicles.AddVehicle(cloneCar);
+        
         var terminate = false;
         while (!terminate)
         {

@@ -38,7 +38,7 @@ vehicles until you want to quit the app.
 
 When you run you will be provided with several options:
 
-![img.png](img.png)
+![img.png](images/img.png)
 
 After you select one and after you have finished customizing your vehicle you will be able to drive it and
 see the specs of your newly built machine.
@@ -50,10 +50,10 @@ to expand the vehicle factory by also creating for the future a retro vehicle de
 just like the modernVehicleFactory does.
 
 After each time you create a vehicle it will be added to a singleton instance of a vehicles list.
-![img_1.png](img_1.png)
+![img_1.png](images/img_1.png)
 
 You can build custom vehicles by setting their type from the first 2 available options:
-![img_2.png](img_2.png)
+![img_2.png](images/img_2.png)
 
 You can make various combinations of the type of vehicle that you will create
-![img_3.png](img_3.png)
+![img_3.png](images/img_3.png)
